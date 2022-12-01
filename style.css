@@ -2,6 +2,7 @@
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .global-msg{
     background: blue;
@@ -106,11 +107,12 @@ justify-content: space-between;
 margin-top: 20px;
 }
 .card{
-width: 350px;
+width: 300px;
 min-height: 200px;
 background: white;
 border-radius: 5px;
 padding-bottom: 20px;
+margin-top: 10px;
 box-shadow: -5px 5px 10px 5px rgba(43, 3, 103, 0.3);
 }
 .card img{
@@ -139,4 +141,100 @@ footer{
     text-align: center;
     min-height: 30px;
     margin-top: 32px;
+}
+/* Media query */
+/* Break points 768px, 1224px  */
+/* min-width, max-width // <=,>= */
+/* @media ( 0 <= width <=768px) { */
+/* laptop */
+@media (max-width: 1224px){
+    .posts{
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+    }
+    .posts-content{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .side-links{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .country, .date{
+        width: 45%;
+    }
+    .date{
+        margin-top: 0;
+    }
+    .card-list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card{
+        width:45%;
+    }
+}
+/* //max width */
+@media (0<= width <=768px){
+    .global-msg{
+        display: none;
+    }
+    article {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        border-radius: 5px;
+        box-shadow: -5px 5px 10px 0;
+      }
+      .art-img{
+        width: 100%;
+      }
+      .title{
+        margin: 1rem 0;
+      }
+      article p{
+        margin: 1 rem 0;
+      }
+      article button{
+        width: 100%;
+      }
+      .country, .date{
+        width: 100%;
+        text-align: center;
+
+      }
+      .side-links{
+        display: flex;
+        flex-direction: column;
+      }
+      .side-links ul{
+        list-style: none;
+      }
+      .side-links ul li{
+        text-decoration: underline;
+        cursor: pointer;
+        color: blue;
+      }
+      .country{
+        margin-bottom: 1rem;
+      }
+      .card{
+width: 100%;
+      }
+      .card button {
+        width: 100%
+      }
+      form{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      form, input{
+        width: 100%;
+
+      }
 }
